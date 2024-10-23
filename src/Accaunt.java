@@ -34,13 +34,24 @@ public class Accaunt {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Write your sum:");
         int scan = scanner.nextInt();
-        if (balance == 0) {
+        if (balance <= 0) {
             System.out.println("Akcha yok");
         }
         System.out.println("Your balance: " + balance);
         System.out.println("Remained on the balance sheet: " + (balance -= scan));
 
+    }
+
+    public void transaction(Accaunt rep) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Transaction: ");
+        double amount = scanner.nextDouble();
+        balance-=amount;
+        rep.balance+=amount;
+        System.out.println("Your balance: "+balance);
+
 
     }
 }
+
 
